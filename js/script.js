@@ -14,7 +14,7 @@ const fetchBooks = () => {
           }
       })
       .then(books => {
-          if (books) { // Se books non è null, chiama displayBooks()
+          if (books) { // se books non è null, chiama displayBooks()
               displayBooks(books)
           }
       })
