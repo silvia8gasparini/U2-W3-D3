@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libreria Antica</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light"
+        style="background-color: #f4e1c9"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img
+              height="60"
+              src="https://png.pngtree.com/png-vector/20240528/ourmid/pngtree-watercolor-fantasy-book-clipart-png-image_12510915.png"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item active">
+                <a
+                  class="display-1 nav-link fs-3"
+                  style="color: #6a3f1b"
+                  href="#"
+                  >Home
+                  <span class="visually-hidden-focusable">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-4" style="color: #6a3f1b" href="#sales"
+                  >Sconti</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link fs-4" style="color: #6a3f1b" href="#gdl"
+                  >GDL</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link fs-4"
+                  style="color: #6a3f1b"
+                  href="#recensioni"
+                  >Recensioni</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex my-2 my-lg-0" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Cerca"
+                aria-label="Search"
+              />
+              <button class="btn btn-custom my-2 my-sm-0" type="submit">
+                Cerca
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container mt-4">
+        <div class="text-center text-lg-start rounded shadow-sm py-3 px-3 my-4">
+          <img
+            class="d-inline-block"
+            height="200"
+            src="https://png.pngtree.com/png-vector/20220716/ourmid/pngtree-fairytale-hobbit-or-dwarf-house-png-image_5983228.png"
+            alt="library-logo"
+          />
+          <h1 class="display-1 d-inline-block align-middle">Hobbit Hole</h1>
+          <p class="lead d-inline-block mx-4 mb-0 align-middle">
+            — Let's go on an adventure!
+          </p>
+        </div>
+
+        <div class="row" id="book-list"></div>
+        <h2 class="fs-1 mt-5 mb-3">Carrello</h2>
+        <ul id="cart" class="list-group"></ul>
+      </div>
+    </main>
+
+    <footer
+      class="container-fluid text-light d-flex flex-column justify-content-center align-items-center mt-5 py-5"
+    >
+      <button
+        type="button"
+        class="btn btn-custom btn-sm mb-4"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Contattaci
+      </button>
+
+      <span>© 2025 Hobbit Hole. All Rights Reserved.</span>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

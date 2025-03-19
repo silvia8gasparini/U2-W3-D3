@@ -1,0 +1,59 @@
+
+      @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Charm:wght@400;700&family=Tangerine:wght@400;700&display=swap");
+      body {
+        background-color: #f8f1e4;
+      }
+
+      body h1 {
+        font-family: "Tangerine";
+        color: #6a3f1b;
+      }
+
+      body h2 {
+        font-family: "Tangerine";
+        color: #6a3f1b;
+      }
+
+     nav a {
+        font-size: larger;
+        font-weight: bold;
+        color: #6a3f1b;
+        font-family: "Charm";
+      }
+
+      .card {
+        background-color: #f4e1c9;
+        border: 1px solid #8b5a2b;
+        font-family: "Charm";
+      }
+      .btn-custom {
+        background-color: #8b5a2b;
+        color: white;
+        font-family: "Charm";
+      }
+      .btn-custom:hover {
+        background-color: #6a3f1b;
+      }
+
+      body p {
+        color: #6a3f1b;
+        font-family: "Charm";
+      }
+
+      footer {
+        background-color: #f4e1c9;
+        font-family: "Charm";
+        color: #6a3f1b;
+      }
+
+      footer span {
+        color: #6a3f1b;
+
+      }
+
+      .cart-item {
+        background-color: #f4e1c9;
+        color: #6a3f1b;
+        font-family: "Charm";
+      }
