@@ -1,20 +1,26 @@
-
 const bookList = document.getElementById("book-list") // seleziona il contenitore in cui verranno inserite le card dei books
 const cartList = document.getElementById("cart") // seleziona cart list
 let cart = JSON.parse(localStorage.getItem("cart")) || [] // recupera il cart salvato dal localStorage e lo converte in un array JS con JSON.parse(). Se non esiste, inizializza cart come array vuoto ([])
 
 // Funzione per recuperare books dall'API //
-const fetchBooks = async () => { // fetch() recuperare i dati dall'API
-  try {
-    const response = await fetch(
-      "https://striveschool-api.herokuapp.com/books"
-    )
-    const books = await response.json() // trasforma la risposta in un array di oggetti
-    displayBooks(books) // chiama displayBooks(books) per visualizzare books
-  } catch (error) { // se c'è un errore, viene catturato dal blocco catch e stampato in console
-    console.error("Errore recupero libri:", error)
-  }
+const fetchBooks = () => {
+  fetch("https://striveschool-api.herokuapp.com/books")
+      .then(response => {
+          if (response.ok) { // controlla se la richiesta ha avuto successo
+              return response.json() // converte la risposta in JSON
+          } else {
+              console.error("Errore nel recupero dei libri:", response.status, response.statusText)
+              return null // ritorna null per evitare errori nel successivo .then()
+          }
+      })
+      .then(books => {
+          if (books) { // Se books non è null, chiama displayBooks()
+              displayBooks(books)
+          }
+      })
+      .catch(error => console.error("Errore di rete:", error)) // gestisce errori di rete
 }
+
 
 // Funzione per visualizzare books //
 const displayBooks = (books) => { // per ogni book viene creato un div
@@ -62,7 +68,7 @@ const renderCart = () => {
     )
     cartItem.innerHTML = 
     `${book.title} - €${book.price.toFixed(2)}
-              <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Rimuovi</button>` // Remove btn chiama removeFromCart con l'indice del libro
+              <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Rimuovi</button>` // onclick -> chiama removeFromCart con l'indice del libro
     cartList.appendChild(cartItem);
   })
 }
